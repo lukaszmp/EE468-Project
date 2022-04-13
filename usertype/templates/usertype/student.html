@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <th>course</th>
+		<th>sec</th>
+		<th>semester</th>
+		<th>year</th>
+		<th>id</th>
+    </tr>
+    {% for item in feature_six_results %}
+    <tr> 
+        <td>{{ item.course }}</td>
+		<td>{{ item.sec }}</td>
+		<td>{{ item.semester }}</td>
+		<td>{{ item.year }}</td>
+		<td>{{ item.id }}</td>
+    </tr>
+    {% endfor %}
+</table>
