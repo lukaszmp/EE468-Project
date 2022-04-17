@@ -1,18 +1,59 @@
-<table>
-    <tr>
-        <th>course</th>
-		<th>sec</th>
-		<th>semester</th>
-		<th>year</th>
-		<th>id</th>
-    </tr>
-    {% for item in feature_six_results %}
-    <tr> 
-        <td>{{ item.course }}</td>
-		<td>{{ item.sec }}</td>
-		<td>{{ item.semester }}</td>
-		<td>{{ item.year }}</td>
-		<td>{{ item.id }}</td>
-    </tr>
-    {% endfor %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.center{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+table, th, td {
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+th{
+  background-color: #ABE8F6;
+  color: black;
+}
+
+td{
+  background-color: #DEF0F4;
+  color: black;
+}
+
+h1{
+  color: black;
+}
+
+
+
+</style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<div style="background-color:#E8F4FF;padding:15px;text-align:center;">
+  <h1>Student</h1>
+</div>
+<table style="width:33%"; class = "center">
+  <tr>
+    <th>Dept</th>
+    <th>Course</th>
+  </tr>
+ <tr>
+    <td>NULL</td>
+    <td>NULL</td>
+  </tr>
+  <tr>
+    <td>NULL</td>
+    <td>NULL</td>
+  </tr>
 </table>
+
+</body>
+</html>
