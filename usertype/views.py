@@ -7,9 +7,9 @@ from .forms import LoginForm
 from django.contrib.auth import authenticate, login
 
 def admin(request):
-	return HttpResponse("admin page")
+	return render(request, 'usertype/admin.html)
 def professor(request):
-	return HttpResponse("professor page")
+	return Hrender(request, 'usertype/professor.html)
 def student(request):
 	manager = dbhelper.dbManager()
 	manager.connect('root','1234','university')
