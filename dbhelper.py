@@ -112,7 +112,7 @@ class dbManager(object):
         :return:
         """
         inSemester = str(inSemester)
-        query = "select course_id, sec_id from teaches where instr(course_id,'"+inDept+"') = 1 and semester = '"+inSemester+"' and year = 2019;"
+        query = "select course_id, sec_id from teaches where instr(course_id,'"+inDept+"') = 1 and semester = '"+inSemester+"';"
         return self.__executeQuery(query)
 
     def __executeQuery(self, inQuery):

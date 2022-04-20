@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Course(models.Model):
     course_id = models.CharField(primary_key=True, max_length=8)
     title = models.CharField(max_length=32, blank=True, null=True)
