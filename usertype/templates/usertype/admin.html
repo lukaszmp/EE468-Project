@@ -1,150 +1,24 @@
 <!DOCTYPE html>
+<form class="forms-sample" name="form" action="{% url 'admin' %}" method="post">
+  {% csrf_token %}
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-* {
-  box-sizing: border-box;
-}
-.right {
-  margin-left: auto;
-}
-
-.left {
-  margin-right: auto;
-}
-
-.queryButton1 {
-	margin-left: 5%
-}
-
-.queryButton2 {
-	margin-left: 72%
-}
-
-
-
-.center{
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-}
-
-.buttonGroup1{
-	margin-left: 5%;
-}
-
-.buttonGroup2{
-	margin-left: 80%;
-}
-
-
-table, th, td {
-  border: 1px solid gray;
-  border-radius: 10px;
-}
-
-th{
-  background-color: #ABE8F6;
-  color: black;
-}
-
-td{
-  background-color: #DEF0F4;
-  color: black;
-}
-
-h1{
-  color: black;
-}
-
-</style>
-</head>
-<body style="font-family:Verdana;color:#aaaaaa;">
-
-<div style="background-color:#E8F4FF;padding:15px;text-align:center;">
-  <h1>Admin</h1>
-</div>
-
-<table style ="width:100%">
-  <tr>
-    <td>
-    <table style="width:100%"; class = "left">
-  <tr>
-    <th>Professors</th>
-  </tr>
- <tr>
-    <td>NULL</td>
-  </tr>
-  <tr>
-    <td>NULL</td>
-  </tr>
-</table>
-    </td>
-    <td>
-      <table style="width:100%"; class = "right">
-  <tr>
-    <th>Name</th>
-    <th>Dept</th>
-    <th># of Students</th>
-  </tr>
- <tr>
-    <td>NULL</td>
-    <td>NULL</td>
-    <td>NULL</td>
-  </tr>
-  <tr>
-    <td>NULL</td>
-    <td>NULL</td>
-    <td>NULL</td>
-  </tr>
-  
-</table>
-    </td>
-    <td>
-      <table style="width:100%"; class = "center">
-  <tr>
-    <th>Min</th>
-    <th>Max</th>
-    <th>Avg</th>
-    <th>Dept</th>
-  </tr>
-  <tr>
-    <td>NULL</td>
-    <td>NULL</td>
-    <td>NULL</td>
-    <td>NULL</td>
-  </tr>
-  <tr>
-    <td>NULL</td>
-    <td>NULL</td>
-    <td>NULL</td>
-    <td>NULL</td>
-  </tr>
-  </table>
-    </td>
-  </tr>
-</table>
-
-<form class = "buttonGroup1">
-	<input type="radio" id="name" name="profsListChioce" value="name">
-	<label for="name">Name</label><br>
-	<input type="radio" id="dept" name="profsListChioce" value="dept">
-	<label for="dept">Department</label><br>
-	<input type="radio" id="salary" name="profsListChioce" value="salary">
-	<label for="salary">Salary</label>
+  <head>
+    <title>Feature Six</title>
+  </head>
+  <body>
+  <label for="sort">Enter sort (name, dept, salary)</label>
+  <input type="text" id="sort" name="inSort"><br><br>
+  <label for="professor">Enter Professor</label>
+  <input type="text" id="professor" name="inProfessor"><br><br>
+  <label for="semester">Enter semester (1 or 2)</label>
+  <input type="text" id="semester" name="inSemester"><br><br>
+  <label for="feature">Enter feature (1, 2, or 3)</label>
+  <input type="text" id="feature" name="inFeature"><br><br>
+  <button type="Submit" value="Submit" name="Submit">Search</button>
+  {% for key, value in list.items %}
+    <p>{{ key }} : {{ value }}</p>
+  {% endfor %}
+  </body>
+</html>>
 </form>
-
-<form class = "buttonGroup2">
-	
-	<input type="radio" id="spring" name="semesterChoice" value="spring">
-	<label for="spring">Spring</label><br>
-	<input type="radio" id="fall" name="semesterChoice" value="fall">
-	<label for="fall">Fall</label><br>
-</form>
-
-<button type="button", class = "queryButton1">Query</button>
-<button type="button", class = "queryButton2">Query</button>
-
-</body>
 </html>

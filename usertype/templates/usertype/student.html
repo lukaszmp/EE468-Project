@@ -6,9 +6,11 @@
     <title>Feature Six</title>
   </head>
   <body>
+  <label for="department">Enter department</label>
+  <input type="text" id="department" name="inDepartment"><br><br>
   <label for="semester">Enter semester (1 or 2)</label>
   <input type="text" id="semester" name="inSemester"><br><br>
-  <button type="Submit" value="Submit" name="Submit"></button>
+  <button type="Submit" value="Submit" name="Submit">Search</button>
   {% for key, value in list.items %}
     <p>{{ key }} : {{ value }}</p>
   {% endfor %}
