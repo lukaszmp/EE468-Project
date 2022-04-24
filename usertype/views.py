@@ -82,6 +82,7 @@ def professor(request):
         prof = request.POST.get("inProfessor")
         semester = request.POST.get("inSemester")
         featNum = request.POST.get("featNum")
+
         if (featNum == "4"):
             manager = dbhelper.dbManager()
             manager.connect("root", "password12", "university")  # poor form to keep in code

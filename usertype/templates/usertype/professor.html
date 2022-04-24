@@ -17,23 +17,22 @@
       <fieldset id = "group1">
           <label for="group1">Choose Feature: </label><br>
           <input type="radio" id="featNum1" name="featNum" value="4">
-          <label for="featNum"> List of course sections and the number of students enrolled in each section that the professor taught in a given semester</label><br>
+          <label for="featNum1"> List of course sections and the number of students enrolled in each section that the professor taught in a given semester</label><br>
           <input type="radio" id="featNum2" name="featNum" value="5">
-          <label for="featNum"> List of students enrolled in a course section taught by the professor in a given semester</label><br>
+          <label for="featNum2"> List of students enrolled in a course section taught by the professor in a given semester</label><br>
       </fieldset><br>
 
       <fieldset id = "groupSemester" >
-          <label for="inSemester">Choose Semester: </label><br>
+          <label for="groupSemester">Choose Semester: </label><br>
           <input type="radio" id="spring" name="inSemester" value="1">
           <label for="spring">Spring</label><br>
           <input type="radio" id="fall" name="inSemester" value="2">
           <label for="fall">Fall</label><br>
       </fieldset>
-
+      <label for="professor">Choose Professor</label>
+      <input type="text" id="professor" name="inProfessor"><br><br>
   </form> <br><br>
 
-  <label for="professor">Choose Professor</label>
-  <input type="text" id="professor" name="inProfessor"><br><br>
 
   {% for key, value in list.items %}
       <p>{{ key }} : {{ value }}</p>
