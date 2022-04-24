@@ -4,20 +4,52 @@
 <html>
   <head>
     <title>Feature Six</title>
+      <style>
+          form{text-align: center}
+          body{text-align: center}
+      </style>
   </head>
   <body>
-  <label for="sort">Enter sort (name, dept, salary)</label>
-  <input type="text" id="sort" name="inSort"><br><br>
-  <label for="professor">Enter Professor</label>
-  <input type="text" id="professor" name="inProfessor"><br><br>
-  <label for="semester">Enter semester (1 or 2)</label>
-  <input type="text" id="semester" name="inSemester"><br><br>
-  <label for="feature">Enter feature (1, 2, or 3)</label>
-  <input type="text" id="feature" name="inFeature"><br><br>
+
   <button type="Submit" value="Submit" name="Submit">Search</button>
+
+  <form>
+      <fieldset id = "group2">
+          <label for="sort">Sort Data By: </label><br>
+          <input type="radio" id="name" name="inSort" value="1">
+          <label for="name">Name</label><br>
+          <input type="radio" id="department" name="inSort" value="2">
+          <label for="department">Department</label><br>
+          <input type="radio" id="salary" name="inSort" value="3">
+          <label for="salary">Salary</label><br><br>
+      </fieldset>
+
+      <fieldset id = "groupSemester" >
+          <label for="inSemester">Choose Semester: </label><br>
+          <input type="radio" id="spring" name="inSemester" value="1">
+          <label for="spring">Spring</label><br>
+          <input type="radio" id="fall" name="inSemester" value="2">
+          <label for="fall">Fall</label><br>
+      </fieldset>
+
+      <fieldset id = "group3">
+          <label for="feature">Enter feature (1, 2, or 3)</label><br>
+          <input type="radio" id="featNum1" name="featNum" value="1">
+          <label for="featNum">List Professors</label><br>
+          <input type="radio" id="featNum2" name="featNum" value="2">
+          <label for="featNum">Show salaries for each department </label><br>
+          <input type="radio" id="featNum3" name="featNum" value="3">
+          <label for="featNum">Show Professor name, department, number of students taught</label><br>
+      </fieldset>
+  </form>
+
+  <label for="professor">Professor Name: </label>
+  <input type="text" id="professor" name="inProfessor"><br><br>
+
   {% for key, value in list.items %}
-    <p>{{ key }} : {{ value }}</p>
+      <p>{{ key }} : {{ value }}</p>
   {% endfor %}
+
   </body>
 </html>>
 </form>

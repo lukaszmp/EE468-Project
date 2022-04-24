@@ -48,7 +48,7 @@ class dbManager(object):
         elif (inByDept):
             query = "select name from instructor order by dept_name;"
         elif (inBySalary):
-            query = "select name from instructor order by salary;"
+            query = "select name from instructor order by current;"
 
         if (query == ""):
             raise ManagerException("order by clause not specified in parameters")
@@ -60,7 +60,7 @@ class dbManager(object):
         """
         :return: resulting cursor
         """
-        query = "select dept_name, min(salary), max(salary), avg(salary) from instructor group by dept_name;"
+        query = "select dept_name, min(current), max(current), avg(current) from instructor group by dept_name;"
         return self.__executeQuery(query)
 
     # Feature 3

@@ -4,16 +4,31 @@
 <html>
   <head>
     <title>Feature Six</title>
+    <style>
+        form{text-align: center}
+        body{text-align: center}
+    </style>
   </head>
   <body>
+  <button type="Submit" value="Submit" name="Submit">Query</button><br><br>
+
   <label for="department">Enter department</label>
   <input type="text" id="department" name="inDepartment"><br><br>
-  <label for="semester">Enter semester (1 or 2)</label>
-  <input type="text" id="semester" name="inSemester"><br><br>
-  <button type="Submit" value="Submit" name="Submit">Search</button>
+
+  <form>
+      <fieldset id = "groupSemester" >
+          <label for="inSemester">Choose Semester:  </label><br>
+          <input type="radio" id="spring" name="inSemester" value="1">
+          <label for="spring">Spring</label><br>
+          <input type="radio" id="fall" name="inSemester" value="2">
+          <label for="fall">Fall</label><br>
+      </fieldset>
+  </form>
+
   {% for key, value in list.items %}
-    <p>{{ key }} : {{ value }}</p>
+      <p>{{ key }} : {{ value }}</p>
   {% endfor %}
+
   </body>
 </html>>
 </form>

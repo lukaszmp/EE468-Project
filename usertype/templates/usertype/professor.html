@@ -4,18 +4,41 @@
 <html>
   <head>
     <title>Feature Four and Five</title>
+      <style>
+          form{text-align: center}
+          body{text-align: center}
+      </style>
   </head>
   <body>
-  <label for="professor">Enter Professor</label>
+
+  <button type="Submit" value="Submit" name="Submit">Query</button><br><br>
+
+  <form>
+      <fieldset id = "group1">
+          <label for="group1">Choose Feature: </label><br>
+          <input type="radio" id="featNum1" name="featNum" value="4">
+          <label for="featNum"> List of course sections and the number of students enrolled in each section that the professor taught in a given semester</label><br>
+          <input type="radio" id="featNum2" name="featNum" value="5">
+          <label for="featNum"> List of students enrolled in a course section taught by the professor in a given semester</label><br>
+      </fieldset><br>
+
+      <fieldset id = "groupSemester" >
+          <label for="inSemester">Choose Semester: </label><br>
+          <input type="radio" id="spring" name="inSemester" value="1">
+          <label for="spring">Spring</label><br>
+          <input type="radio" id="fall" name="inSemester" value="2">
+          <label for="fall">Fall</label><br>
+      </fieldset>
+
+  </form> <br><br>
+
+  <label for="professor">Choose Professor</label>
   <input type="text" id="professor" name="inProfessor"><br><br>
-  <label for="semester">Enter semester (1 or 2)</label>
-  <input type="text" id="semester" name="inSemester"><br><br>
-  <label for="feature">Enter feature (4 or 5)</label>
-  <input type="text" id="feature" name="inFeature"><br><br>
-  <button type="Submit" value="Submit" name="Submit">Search</button>
+
   {% for key, value in list.items %}
-    <p>{{ key }} : {{ value }}</p>
+      <p>{{ key }} : {{ value }}</p>
   {% endfor %}
+
   </body>
 </html>>
 </form>
