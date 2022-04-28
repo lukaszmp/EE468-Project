@@ -7,14 +7,17 @@
       <style>
           form{text-align: center}
           body{text-align: center}
+          table, tr, td {-webkit-border-radius: 8px; -moz-border-radius: 8px; border: 1px solid black; }
+          fieldset {-webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;}
+          button {-webkit-border-radius: 8px; -moz-border-radius: 8px; border-radius: 8px;}
       </style>
   </head>
-  <body>
+  <body style="background-color:#b9eaea;">
 
   <button type="Submit" value="Submit" name="Submit">Query</button><br><br>
 
   <form>
-      <fieldset id = "group1">
+      <fieldset id = "group1" style="width:33%; margin: auto">
           <label for="group1">Choose Feature: </label><br>
           <input type="radio" id="featNum1" name="featNum" value="4">
           <label for="featNum"> List of course sections and the number of students enrolled in each section that the professor taught in a given semester</label><br>
@@ -22,7 +25,7 @@
           <label for="featNum"> List of students enrolled in a course section taught by the professor in a given semester</label><br>
       </fieldset><br>
 
-      <fieldset id = "groupSemester" >
+      <fieldset id = "groupSemester" style="width:15%; margin: auto" >
           <label for="inSemester">Choose Semester: </label><br>
           <input type="radio" id="spring" name="inSemester" value="1">
           <label for="spring">Spring</label><br>
@@ -30,14 +33,19 @@
           <label for="fall">Fall</label><br>
       </fieldset>
 
-  </form> <br><br>
+  </form> <br>
 
   <label for="professor">Choose Professor</label>
   <input type="text" id="professor" name="inProfessor"><br><br>
 
-  {% for key, value in list.items %}
-      <p>{{ key }} : {{ value }}</p>
-  {% endfor %}
+  <table style="margin: auto">
+      {% for key, value in list.items %}
+          <tr>
+              <td>{{ key }}</td>>
+              <td>{{ value }}</td>
+          </tr>
+      {% endfor %}
+  </table>
 
   </body>
 </html>>
