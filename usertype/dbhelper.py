@@ -4,8 +4,8 @@ import mysql.connector
 # 4/2/22
 # driver code for django interface
 
-class ManagerException(Exception): # custom error, inherits from Exception, no further implemtation needed
-    pass
+class ManagerException(Exception): # custom error, inherits Exception constructor
+  pass
 
 class dbManager(object):
 
@@ -48,7 +48,7 @@ class dbManager(object):
         elif (inByDept):
             query = "select name from instructor order by dept_name;"
         elif (inBySalary):
-            query = "select name from instructor order by current;"
+            query = "select name from instructor order by salary;"
 
         if (query == ""):
             raise ManagerException("order by clause not specified in parameters")
@@ -60,7 +60,7 @@ class dbManager(object):
         """
         :return: resulting cursor
         """
-        query = "select dept_name, min(current), max(current), avg(current) from instructor group by dept_name;"
+        query = "select dept_name, min(salary), max(salary), avg(salary) from instructor group by dept_name;"
         return self.__executeQuery(query)
 
     # Feature 3
@@ -112,7 +112,7 @@ class dbManager(object):
         :return:
         """
         inSemester = str(inSemester)
-        query = "select course_id, sec_id from teaches where instr(course_id,'"+inDept+"') = 1 and semester = '"+inSemester+"' and year = 2019;"
+        query = "select course_id, sec_id from teaches where instr(course_id,'"+inDept+"') = 1 and semester = '"+inSemester+"';"
         return self.__executeQuery(query)
 
     def __executeQuery(self, inQuery):
