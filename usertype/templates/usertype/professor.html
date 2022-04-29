@@ -31,18 +31,19 @@
           <label for="spring">Spring</label><br>
           <input type="radio" id="fall" name="inSemester" value="2">
           <label for="fall">Fall</label><br>
-      </fieldset>
+      </fieldset><br>
 
+      <label for="inProfessor">Choose Professor</label>
+      <input type="text" id="professor" name="inProfessor"><br>
   </form> <br>
-
-  <label for="professor">Choose Professor</label>
-  <input type="text" id="professor" name="inProfessor"><br><br>
 
   <table style="margin: auto">
       {% for key, value in list.items %}
-          <tr>
+          <tr style="margin: 50%;">
               <td>{{ key }}</td>>
-              <td>{{ value }}</td>
+              {% for i in value%}
+                  <td style="margin: 50%">{{ i }}</td>
+              {% endfor %}
           </tr>
       {% endfor %}
   </table>

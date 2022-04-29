@@ -44,16 +44,21 @@
           <input type="radio" id="featNum3" name="featNum" value="3">
           <label for="featNum">Show Professor name, department, number of students taught</label><br>
       </fieldset><br>
+
+      <label for="inProfessor">Professor Name: </label>
+      <input type="text" id="inProfessor" name="inProfessor"><br><br>
+
   </form>
 
-  <label for="professor">Professor Name: </label>
-  <input type="text" id="professor" name="inProfessor"><br><br>
+
 
   <table style="margin: auto">
       {% for key, value in list.items %}
           <tr>
-              <td>{{ key }}</td>>
-              <td>{{ value }}</td>
+              <td style="margin: 50%;">{{ key }}</td>
+              {% for i in value%}
+                  <td style="margin: 50%;">{{ i }}</td>
+              {% endfor %}
           </tr>
       {% endfor %}
   </table>

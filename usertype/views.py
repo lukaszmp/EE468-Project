@@ -48,18 +48,28 @@ def admin(request):
             manager = dbhelper.dbManager()
             manager.connect("root", "password12", "university")  # poor form to keep in code
             feature_two_results = manager.getFeatureTwo()
-            i = 0
+            i = 1
+            inName = "Name"
+            inMin = "Min"
+            inMax = "Max"
+            inAvg = "Avg"
+            classes[0] = {inName, inMin, inMax, inAvg}
             for (name, min, max, avg) in feature_two_results:
                 classes[i] = (name + ":" + str(min) + ":" + str(max) + ":" + str(avg))
+                classes[i] = classes[i].split(":")
                 i = i + 1
 
         elif (featNum == "3"):
             manager = dbhelper.dbManager()
             manager.connect("root", "password12", "university")  # poor form to keep in code
             feature_three_results = manager.getFeatureThree(prof, semester)
-            i = 0
+            i = 1
+            classes[0] = {"Name",
+                          "Department",
+                          "# Students"}
             for (name, deptName, count) in feature_three_results:
                 classes[i] = (name + ":" + deptName + ":" + str(count))
+                classes[i] = classes[i].split(":")
                 i = i + 1
 
         else:
@@ -88,9 +98,14 @@ def professor(request):
             manager.connect("root", "password12", "university")  # poor form to keep in code
             feature_four_results = manager.getFeatureFour(prof, semester)
 
-            i = 0
+            i = 1
+            classes[0] = {"Name",
+                          "Course",
+                          "Section",
+                          "Count"}
             for (name, course, section, count) in feature_four_results:
                 classes[i] = (name + ":" + course + ":" + section + ":" + str(count)) #split string in js side for better display
+                classes[i] = classes[i].split(":")
                 i = i + 1
 
             print(semester)
@@ -102,7 +117,8 @@ def professor(request):
             manager.connect("root", "password12", "university") #poor form to keep in code
             feature_five_results = manager.getFeatureFive(prof, semester)
 
-            i = 0
+            i = 1
+            classes[0] = {"Students"}
             for (studentName) in feature_five_results:
                 classes[i] = studentName
                 i = i + 1

@@ -68,8 +68,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'course_management_system.wsgi.application'
 
+WSGI_APPLICATION = 'course_management_system.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'mysql.connector.django',
         'NAME': 'university',
 		'USER': 'root',
-		'PASSWORD': 'password12',
+		'PASSWORD': 'keeP0nmov!n3',
 		'HOST': 'localhost'
     }
 }
