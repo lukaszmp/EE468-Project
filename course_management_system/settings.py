@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'mysql.connector.django',
         'NAME': 'university',
 		'USER': 'root',
-		'PASSWORD': 'keeP0nmov!n3',
+		'PASSWORD': 'password12',
 		'HOST': 'localhost'
     }
 }
