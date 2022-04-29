@@ -170,11 +170,11 @@ def user_login(request):
 		if user is not None:
 			login(request, user)
 			# user_type = user.groups.all()[0].name
-			if string == 'Admin':
+			if string == 'admin':
 				return HttpResponseRedirect('admin')
-			elif string == 'Professor':
+			elif string == 'professor':
 				return HttpResponseRedirect('professor')
-			elif string == 'Student':
+			elif string == 'student':
 				return HttpResponseRedirect('student')
 	else:
 		form = LoginForm()
